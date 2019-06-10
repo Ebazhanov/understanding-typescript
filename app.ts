@@ -63,3 +63,23 @@ console.log(returnMyName());
 function sayHello(): void {
     console.log("Hello, Evgeny!")
 }
+
+// argument types
+function multiply(value1: number, value2: number): number {
+    return value1+value2
+}
+console.log(multiply(2, 222));
+
+// function types
+// let myMultiply;
+let myMultiply: (a:number, b:number) => number;
+
+// myMultiply();
+myMultiply = multiply;
+console.log(myMultiply(59, 99));
+
+// objects
+let userData: {name: string, age: number} = {
+    name: "Evgeny",
+    age: 22
+};
