@@ -83,3 +83,40 @@ let userData: {name: string, age: number} = {
     name: "Evgeny",
     age: 22
 };
+
+
+// type alias
+type Complex = {data: number[], output: (all: boolean) => number[]}
+
+// complex object
+/*let complex: Complex= {
+    data: [100, 2.99, 10],*/
+
+/*    output: function (all: boolean): number {
+        return this.data;
+    }*/
+//};
+
+// union types
+let myRealRealAge: number | string = 27;
+myRealRealAge = "27";
+// myRealRealAge = true;
+
+// check types
+let finalValue = 'A string';
+if (typeof finalValue == "number") {
+    console.log("Final value is a number");
+}
+
+// never
+function neverReturns(): never {
+    throw new Error('An error');
+}
+
+//Nullable types
+let canBeNull: number | null = 12;
+canBeNull = null;
+let canAlsoBeNull: any;
+canAlsoBeNull = null;
+let canThisBeAny = null;
+canThisBeAny = 12;

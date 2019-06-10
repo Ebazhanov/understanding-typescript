@@ -67,3 +67,30 @@ var userData = {
     name: "Evgeny",
     age: 22
 };
+// complex object
+/*let complex: Complex= {
+    data: [100, 2.99, 10],*/
+/*    output: function (all: boolean): number {
+        return this.data;
+    }*/
+//};
+// union types
+var myRealRealAge = 27;
+myRealRealAge = "27";
+// myRealRealAge = true;
+// check types
+var finalValue = 'A string';
+if (typeof finalValue == "number") {
+    console.log("Final value is a number");
+}
+// never
+function neverReturns() {
+    throw new Error('An error');
+}
+//Nullable types
+var canBeNull = 12;
+canBeNull = null;
+var canAlsoBeNull;
+canAlsoBeNull = null;
+var canThisBeAny = null;
+canThisBeAny = 12;
