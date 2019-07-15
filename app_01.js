@@ -93,4 +93,4 @@ canBeNull = null;
 var canAlsoBeNull;
 canAlsoBeNull = null;
 var canThisBeAny = null;
-canThisBeAny = 12;
+// canThisBeAny = 12;

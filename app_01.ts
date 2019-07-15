@@ -119,4 +119,4 @@ canBeNull = null;
 let canAlsoBeNull: any;
 canAlsoBeNull = null;
 let canThisBeAny = null;
-canThisBeAny = 12;
+// canThisBeAny = 12;
