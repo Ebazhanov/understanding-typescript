@@ -60,14 +60,14 @@ console.log(myPrint61);
 
 // 62. Getters & Setters
 class Plant {
-    private _cars: string | undefined;
+    private _cars: string = "Default";
 
     get cars() {
         return this._cars;
     }
 
     set cars(value: string) {
-        if (value.length > 3){
+        if (value.length > 3) {
             this._cars = value;
         } else {
             this._cars = "Default";
@@ -77,4 +77,60 @@ class Plant {
 
 let plant = new Plant();
 console.log(plant.cars);
-plant.cars
+plant.cars = "AB";
+console.log(plant.cars);
+plant.cars = "Javascript";
+console.log(plant.cars);
+
+// 63. Static Properties and Methods
+class Helpers {
+    static PI: number = 3.14;
+    static calcCircumference(diameter: number):number {
+        return this.PI * diameter;
+    }
+}
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircumference(3));
+
+// 64. Abstract Classes
+abstract class Project {
+    projectName: string | undefined;
+    bugdet: number = 50000;
+
+    abstract changeName(name: string): void;
+
+    calcBudget(){
+        return this.bugdet * 2;
+    }
+}
+class ITProject extends Project {
+    changeName(name: string): void {
+        this.projectName = name;
+    }
+}
+
+let newProject = new ITProject();
+console.log(newProject);
+newProject.changeName("Super IT Project");
+console.log(newProject);
+
+// 65. Private Constructors & Singletons (added with TypeScript 2.0)
+class OnlyOne {
+    private static instance: OnlyOne;
+
+    private constructor (public name: string) {}
+
+    static getInstance() {
+        if (!OnlyOne.instance){
+            OnlyOne.instance = new OnlyOne('The Only One')
+        }
+        return OnlyOne.instance;
+    }
+}
+
+let wrong = new OnlyOne('The Only One');
+let right = OnlyOne.getInstance();
+console.log(right.name);
+right.name = 'Something else';
+
+// 66. "readonly" Properties (added with TypeScript 2.0)
