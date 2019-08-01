@@ -6,3 +6,5 @@ In progress
 - `$ npm init`
 - `$ npm install lite-server --save-dev`
 - `$ tsc name-of-the-file.ts`
+compile class
+- `$ tsc solution3.ts`
