@@ -13,11 +13,14 @@ class Car1 {
     }
 
     accelerate(speed: number){
-        this.accelerate = this.acceleration + speed;
+        this.acceleration = this.acceleration + speed;
     }
 }
 const car1 = new Car1("BMW");
 car1.honk();
+
 console.log(car1.acceleration);
+
 car1.accelerate(20);
-console.log(car1.accelerate);
+
+console.log(car1.acceleration);
