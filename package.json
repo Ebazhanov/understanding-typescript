@@ -20,5 +20,8 @@
   "homepage": "https://github.com/Ebazhanov/understanding-typescript#readme",
   "devDependencies": {
     "lite-server": "^2.5.4"
+  },
+  "dependencies": {
+    "systemjs": "^5.0.0"
   }
 }
