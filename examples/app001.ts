@@ -26,10 +26,10 @@ console.log(addNumbers(10, 3));
 const multiplyNumbers = (number1: number, number2: number) => number1 * number2;
 console.log(multiplyNumbers(12, 99));
 
-const greet = () => {
+const greet = (myPerson1: { firstName: string; age: number }) => {
     console.log("Hello! Evgeny")
 };
-greet();
+greet(myPerson1);
 
 const greetFriend = friend => console.log(friend);
 
