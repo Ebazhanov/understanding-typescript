@@ -1,5 +1,8 @@
 interface NamedPerson {
-    firstName: string
+    firstName?: string,
+    age?: number;
+    [propName: string]: any;
+    greet(lastName: string): void;
 }
 
 function hello(myPerson: NamedPerson) {
@@ -7,14 +10,27 @@ function hello(myPerson: NamedPerson) {
 }
 
 function changeName(myPerson: NamedPerson) {
-    myPerson.firstName = "Anna"
+    myPerson.firstName = "Zhenja"
 }
 
-const myPerson = {
+const myPerson: NamedPerson = {
     firstName: "Zhenja",
-    age: 27
+    hobbies: ["Sport", "Programming"],
+    greet(lastName: string){
+        console.log("Hello, I am " + this.firstName + " " + lastName)
+    }
 };
 
-hello(myPerson);
 changeName(myPerson);
-hello(myPerson);
+myPerson.greet(' Baklazhanov');
+
+class Person2 implements NamedPerson {
+    firstName: string | undefined;
+    greet(lastName: string) {
+        console.log("Hello, I am " + this.firstName + " " + lastName)
+    }
+}
+
+const hisPerson = new Person2();
+hisPerson.firstName = "Evgeny";
+// greet(hisPerson);
