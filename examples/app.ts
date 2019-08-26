@@ -34,3 +34,9 @@ class Person2 implements NamedPerson {
 const hisPerson = new Person2();
 hisPerson.firstName = "Evgeny";
 // greet(hisPerson);
+
+const newPerson = new Person2();
+newPerson.firstName = "Zhenja";
+greet(newPerson);
+
+
