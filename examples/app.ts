@@ -13,10 +13,34 @@ function betterEcho<T>(data: T) {
 }
 
 console.log(betterEcho("Max").length);
-console.log(betterEcho<number>(27).length);
+// console.log(betterEcho<number>(27).length);
 console.log(betterEcho({name: "Max", age: 27}));
 
 // Build-in Generic
 const testResultsNew: Array<number> = [1.99, 2.33];
 testResultsNew.push(-2.999);
 console.log(testResultsNew);
+
+// Arrays
+function printAll<T>(args: T[]){
+    args.forEach((element) => console.log(element))
+}
+printAll<string>(["Apple", "Banana"]);
+
+// Generic Types
+const echo2: <T>(data: T) => T = betterEcho;
+console.log(echo2<string>("Something"));
+
+// Generic Class
+class SimpleMath<T> {
+    baseValue: T | undefined;
+    multiplyValue: T | undefined;
+/*    calculate(): number{
+        return + this.baseValue * + this.multiplyValue;
+    }*/
+}
+
+const simpleMath = new SimpleMath();
+simpleMath.baseValue = 'text';
+simpleMath.multiplyValue = 21;
+// console.log(simpleMath.calculate());
