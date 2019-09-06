@@ -36,3 +36,31 @@ class PlantWithDecorator {
 }
 const plantNew = new PlantWithDecorator();
 (<any>plantNew).print();
+
+
+// Method Decorator
+function editable(value: boolean) {
+    return function(target: any, propName: string, descriptor: PropertyDescriptor){
+        descriptor.writable = value;
+    }
+}
+
+class ProjectDecorator {
+    projectName: string;
+
+    constructor(name: string){
+        this.projectName = name;
+    }
+
+    @editable(false)
+    calcBudget(){
+        console.log(1000)
+    }
+}
+
+const project = new ProjectDecorator("Super Project");
+project.calcBudget();
+project.calcBudget = function () {
+    console.log(2000);
+};
+project.calcBudget();
