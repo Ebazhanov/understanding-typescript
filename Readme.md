@@ -18,7 +18,9 @@ to ES5
 - `$ tsc solution3.ts -t ES5`
 
 Creat one single file based on several others
+```bash
 - `$ tsc --outFile examples/app.js examples/circleMath.ts examples/rectangleMath.ts examples/app.ts`
+```
 
 Add reference
 - `$ tsc examples/app.ts --outFile examples/app.js`
