@@ -3,6 +3,9 @@ In progress
 [/course/understanding-typescript](https://www.udemy.com/course/understanding-typescript)
 - - - - - -
 
+<details>
+<summary><b>Getting started</b></summary>
+
 - `$ sudo npm -g install typescript`
 
 - `$ npm init`
@@ -10,6 +13,7 @@ In progress
 - `$ npm install lite-server --save-dev`
 
 - `$ tsc name-of-the-file.ts`
+</details>
 
 compile class
 - `$ tsc solution3.ts`
@@ -19,6 +23,7 @@ to ES5
 
 <details>
 <summary><b>Creat one single file based on several others</b></summary>
+
 `$ tsc --outFile examples/app.js examples/circleMath.ts examples/rectangleMath.ts examples/app.ts`
 
 </details>
