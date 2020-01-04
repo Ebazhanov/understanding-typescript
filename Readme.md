@@ -1,6 +1,4 @@
-In progress
------------
-[/course/understanding-typescript](https://www.udemy.com/course/understanding-typescript)
+<img src="https://monosnap.com/image/qWvDBkhnXf9Z9I1OnsZlRKwygEDrE6"/>
 - - - - - -
 
 <details>
